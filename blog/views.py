@@ -12,5 +12,5 @@ def post_list(request):
     # pass 'posts' to render function
     # {} is a place to put stuff for the template to use
     # 'posts' must first be named: {'posts':posts}
-    return render(request, 'blog/post_list.html', {})
+    return render(request, 'blog/post_list.html', {'posts':posts})
 
