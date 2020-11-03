@@ -1,3 +1,13 @@
-h1 a, h2 a {
-    color: #FF8833;
+h1 a {
+    color: #699F7D;
 }
+
+h2 a {
+    color: #699F7D;
+    font-family: 'Caveat';
+}
+
+body {
+    padding-left: 20px;
+}
+
