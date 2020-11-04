@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from django.utils import timezone #let us sort by time
 from .models import Post       #lets us make things dynamic - connect model to template through view
 
@@ -14,3 +15,6 @@ def post_list(request):
     # 'posts' must first be named: {'posts':posts}
     return render(request, 'blog/post_list.html', {'posts':posts})
 
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk) #handles cases where no post of pk exists
+    return render(request, 'blog/post_detail.html', {'post':post})
